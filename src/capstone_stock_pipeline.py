@@ -74,7 +74,7 @@ print(df.head(10))
 # --- Step 7: Save Cleaned Data ---
 df.to_csv("cleaned_stock_data.csv", index=False)
 
-print("\n✅ Cleaned dataset saved as 'cleaned_stock_data.csv'")
+print("\n Cleaned dataset saved as 'cleaned_stock_data.csv'")
 
 
 # --- Step 8: Summary ---
