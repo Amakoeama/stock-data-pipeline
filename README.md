@@ -1,5 +1,8 @@
 # Stock Data Engineering Pipeline
 
+## Architecture
+This project follows a modular data pipeline architecture including data ingestion, processing, feature engineering, and output generation.
+
 ## Overview
 This project implements a data engineering pipeline to process historical stock market data.
 

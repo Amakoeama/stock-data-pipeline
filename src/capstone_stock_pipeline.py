@@ -3,10 +3,13 @@
 # -----------------------------------------------------------
 
 import pandas as pd
+import os 
 
 # --- Step 1: Load Dataset ---
-df = pd.read_csv("all_stocks_5yr.csv")
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(base_dir, '..', 'data', 'all_stocks_5yr.csv')
 
+df = pd.read_csv(data_path)
 print("\n--- Original Dataset ---")
 print("Total rows:", len(df))
 
@@ -72,8 +75,9 @@ print(df.head(10))
 
 
 # --- Step 7: Save Cleaned Data ---
-df.to_csv("cleaned_stock_data.csv", index=False)
+output_path = os.path.join(base_dir, '..', 'output', 'cleaned_stock_data.csv')
 
+df.to_csv(output_path, index=False)
 print("\n Cleaned dataset saved as 'cleaned_stock_data.csv'")
 
 
